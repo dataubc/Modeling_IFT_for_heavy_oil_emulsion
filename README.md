@@ -8,7 +8,8 @@ In this work I am building models using data generated in our earlier paper *Mod
 > Canadian Natural Resources Limited
 
 
-Abstract
+**Abstract**
+
 In this paper, we focus on the interfacial properties, relative volume change, and PVT behavior
 of CO 2 and CH 4 in (w/ho) emulsions, which is encountered in heavy oil reservoirs during
 secondary recovery methods such as water or steam injection. We generated the water-in-heavy-

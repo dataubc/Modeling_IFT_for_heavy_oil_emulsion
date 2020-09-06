@@ -1,5 +1,5 @@
-# Modeling_IFT_for_heavy_oil_emulsion
-Modeling for paper  "Underlying Physics of Heavy Oil Recovery by Gas Injection: An Experimental Parametric Analysis When Oil Exists in the Form of Oil Based Emulsion"
+# Modeling IFT for heavy oil emulsion
+In this work I am building models using data generated in our earlier work Modeling "Underlying Physics of Heavy Oil Recovery by Gas Injection: An Experimental Parametric Analysis When Oil Exists in the Form of Oil Based Emulsion"
 
 Mohammed Mohammedalmojtaba, Lixing Lin, Georgeta Istratescu, Tayfun Babadagli
 University of Alberta

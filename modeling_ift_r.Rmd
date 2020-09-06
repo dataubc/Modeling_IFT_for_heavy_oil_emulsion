@@ -1,10 +1,15 @@
 ---
-title: "R Notebook"
-output: html_notebook
+title: "Modeling IFT and Voulme Expansion"
+output:
+  github_document:
+    pandoc_args: --webtex
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(message = FALSE)
+
 library(tidyverse, quietly = T)
 library(broom, quietly = T)
 library(tree, quietly = T)
@@ -17,7 +22,8 @@ ift_data
 
 
 ```
-```{r}
+
+```{r, warning=FALSE}
 ggplot(ift_data, aes(Water_content, IFT,color = Gas) ) +
   geom_point() +
   stat_smooth()

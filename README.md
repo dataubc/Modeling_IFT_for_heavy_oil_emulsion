@@ -1,4 +1,5 @@
-# Modeling IFT for heavy oil emulsion
+# Modeling IFT and Volume Expansion for Heavy Oil Recovery by Gas Injection
+
 In this work I am building models using data generated in our earlier paper [Modeling "Underlying Physics of Heavy Oil Recovery by Gas Injection: An Experimental Parametric Analysis When Oil Exists in the Form of Oil Based Emulsion](https://www.sciencedirect.com/science/article/abs/pii/S0263876220304561)
 
 > Mohammedalmojtaba Salama, Lixing Lin, Georgeta Istratescu, Tayfun Babadagli

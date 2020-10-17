@@ -24,7 +24,7 @@ def main(path = 'data/ift_data.xlsx', test_size = 0.2 ):
     - test_size : the size of the data set the will be allocated for testing
     
     
-    outputs:
+    returns:
     ------
     None, the model print the score of the model in the training and test data set
     '''
@@ -65,6 +65,19 @@ def main(path = 'data/ift_data.xlsx', test_size = 0.2 ):
     
 
 def read_data(path):
+    
+    '''
+    reading the data as a dataframe
+    
+    inputs:
+    ------
+    path : path to the input
+    
+    returns:
+    -------
+    data: a dataframe of the read data
+    
+    '''
     data = pd.read_excel(path)
     
     return data

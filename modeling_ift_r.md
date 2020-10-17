@@ -2,6 +2,7 @@ Modeling IFT and Voulme Expansion
 ================
 
 ``` r
+# let's us read the data set
 ift_data <- read_excel(path = "data/ift_data.xlsx")
 ift_data
 ```
@@ -22,19 +23,36 @@ ift_data
     ## # … with 551 more rows
 
 ``` r
+# visualizing the IFT
 ggplot(ift_data, aes(Water_content, IFT,color = Gas) ) +
   geom_point() +
+    ggtitle("Effect of water content and type of Gas in IFT")+
+
   stat_smooth()
 ```
 
 ![](modeling_ift_r_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
 ``` r
+# visualizing the volume expansion
+ggplot(ift_data, aes(Water_content, volume_ratio
+                     ,color = Gas),
+       ) +
+  ggtitle("Effect of water content and type of Gas in Volume Ratio")+
+  geom_point() +
+  stat_smooth()
+```
+
+![](modeling_ift_r_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+
+``` r
+# let's build a linear model to predict the IFT
 model_ift <- lm(scale(IFT) ~ scale(Water_content)*scale(time_minutes), data = ift_data)
 model_vol <- lm(volume_ratio ~ Water_content*time_minutes, data = ift_data)
 ```
 
 ``` r
+# IFT model
 tidy(model_ift)
 ```
 
@@ -47,6 +65,7 @@ tidy(model_ift)
     ## 4 scale(Water_content):scale(time_min…   0.248     0.0406     6.11       1.85e-9
 
 ``` r
+# Volume Expansion model
 tidy(model_vol)
 ```
 
@@ -57,18 +76,3 @@ tidy(model_vol)
     ## 2 Water_content              -0.0591    0.00952        -6.21 1.04e- 9
     ## 3 time_minutes               -0.0000134 0.00000711     -1.88 6.04e- 2
     ## 4 Water_content:time_minutes -0.000159  0.0000189      -8.42 3.15e-16
-
-``` r
-ift_data$pred_add = predict(model_ift)
-
-
-ggplot(ift_data, aes(x = Water_content, y = IFT, color = Gas)) +
-     geom_point() +
-  labs(title = 'Effect of water content and type of Gas in IFT',
-       x = "Water Content",
-       y = "IFT") + 
-  theme(plot.title = element_text(face = "bold", size = 12, hjust = 0.5),
-        axis.title = element_text(face = "bold", size = 12))
-```
-
-![](modeling_ift_r_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->

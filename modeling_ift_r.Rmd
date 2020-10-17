@@ -17,6 +17,7 @@ library(readxl)
 ```
 
 ```{r load datasets for this lab, message=FALSE}
+# let's us read the data set
 ift_data <- read_excel(path = "data/ift_data.xlsx")
 ift_data
 
@@ -24,35 +25,38 @@ ift_data
 ```
 
 ```{r, warning=FALSE}
+# visualizing the IFT
 ggplot(ift_data, aes(Water_content, IFT,color = Gas) ) +
+  geom_point() +
+    ggtitle("Effect of water content and type of Gas in IFT")+
+
+  stat_smooth()
+```
+```{r, warning=FALSE}
+# visualizing the volume expansion
+ggplot(ift_data, aes(Water_content, volume_ratio
+                     ,color = Gas),
+       ) +
+  ggtitle("Effect of water content and type of Gas in Volume Ratio")+
   geom_point() +
   stat_smooth()
 ```
 
-
 ```{r}
-
+# let's build a linear model to predict the IFT
 model_ift <- lm(scale(IFT) ~ scale(Water_content)*scale(time_minutes), data = ift_data)
 model_vol <- lm(volume_ratio ~ Water_content*time_minutes, data = ift_data)
 
 ```
 
 ```{r}
+# IFT model
 tidy(model_ift)
 ```
 ```{r}
+# Volume Expansion model
 tidy(model_vol)
 ```
 
-```{r}
-ift_data$pred_add = predict(model_ift)
 
 
-ggplot(ift_data, aes(x = Water_content, y = IFT, color = Gas)) +
-     geom_point() +
-  labs(title = 'Effect of water content and type of Gas in IFT',
-       x = "Water Content",
-       y = "IFT") + 
-  theme(plot.title = element_text(face = "bold", size = 12, hjust = 0.5),
-        axis.title = element_text(face = "bold", size = 12))
-```

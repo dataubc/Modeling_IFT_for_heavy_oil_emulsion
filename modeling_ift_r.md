@@ -38,7 +38,7 @@ ggplot(ift_data, aes(Water_content, IFT,color = Gas) ) +
 ggplot(ift_data, aes(Water_content, volume_ratio
                      ,color = Gas),
        ) +
-  ggtitle("Effect of water content and type of Gas in Volume Ratio")+
+  ggtitle("Effect of water content and gas type in Volume Ratio")+
   geom_point() +
   stat_smooth()
 ```

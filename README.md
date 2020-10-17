@@ -27,9 +27,14 @@ Machine Learning :
 
 After conducting initial data exploration and visualization I created two models to predict the IFT given the water content, gas type, and time. A linear model was implemented with Ridge model to control for overfitting, but the obtained score was still low. Using GradientBoostingRegressor I was able to get 99% accuracy on the test data after applying a full pipeline for preprocessing 'scaling' numerical data and 'encoding' categorical variables. Validation using GridSearchCV was performed to optimize the learning rate
 
-[IFT prediction model in python](https://github.com/dataubc/Modeling_IFT_for_heavy_oil_emulsion/blob/master/modeling_ift_python.ipynb)
-[lm model in R][https://github.com/dataubc/Modeling_IFT_for_heavy_oil_emulsion/blob/master/modeling_ift_r.md]
-[Volume Expansion model](https://github.com/dataubc/Modeling_IFT_for_heavy_oil_emulsion/blob/master/modeling_ift_r.md)
+- [IFT prediction model in python: Notebook](https://github.com/dataubc/Modeling_IFT_for_heavy_oil_emulsion/blob/master/modeling_ift_python.ipynb)
+
+- [IFT prediction model in python: python script](https://github.com/dataubc/Modeling_IFT_for_heavy_oil_emulsion/blob/master/gradient_boosting.py)
+
+- [Volume Expansion model :Notebook](https://github.com/dataubc/Modeling_IFT_for_heavy_oil_emulsion/blob/master/modeling_ift_r.md)
+
+- [lm model in R for IFT and Volume expansion](https://github.com/dataubc/Modeling_IFT_for_heavy_oil_emulsion/blob/master/modeling_ift_r.md)
+
 
 
 Data is available upon request:

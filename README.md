@@ -1,5 +1,8 @@
 # Modeling IFT and Volume Expansion for Heavy Oil Recovery by Gas Injection
 
+![alt text](https://github.com/dataubc/Modeling_IFT_for_heavy_oil_emulsion/blob/master/modeling_ift_r_files/figure-gfm/unnamed-chunk-1-1.png)
+
+
 In this work I am building models using data generated in our earlier paper [Modeling "Underlying Physics of Heavy Oil Recovery by Gas Injection: An Experimental Parametric Analysis When Oil Exists in the Form of Oil Based Emulsion](https://www.sciencedirect.com/science/article/abs/pii/S0263876220304561)
 
 > Mohammedalmojtaba Salama, Lixing Lin, Georgeta Istratescu, Tayfun Babadagli
@@ -29,6 +32,7 @@ After conducting initial data exploration and visualization I explopred differen
 - [Volume Expansion model :Notebook](https://github.com/dataubc/Modeling_IFT_for_heavy_oil_emulsion/blob/master/modeling_ift_r.md)
 
 - [lm model in R for IFT and Volume expansion](https://github.com/dataubc/Modeling_IFT_for_heavy_oil_emulsion/blob/master/modeling_ift_r.md)
+
 
 
 

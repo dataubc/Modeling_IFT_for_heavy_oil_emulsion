@@ -28,7 +28,7 @@ ift_data
 # visualizing the IFT
 ggplot(ift_data, aes(Water_content, IFT,color = Gas) ) +
   geom_point() +
-    ggtitle("Effect of water content and type of Gas in IFT")+
+    ggtitle("Effect of water content and gas type in IFT")+
 
   stat_smooth()
 ```

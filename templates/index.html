@@ -14,18 +14,20 @@
 <body>
  <div class="login">
 	<h1>IFT Prediction of Gas Injection in Heavy Oil Emulsion</h1>
+     <h4>Gas type can be CO2 or CH3, Water Content can be in the range 0-1, time elapsed can be 0-500 minutes</h4>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="gas_type" placeholder="Enter Gas type, Co2 or CH4" required="required" />
-        <input type="text" name="water_content" placeholder="Enter Water Content, 0-1" required="required" />
-        <input type="text" name="time" placeholder="Enter time elapsed since starting the experiment in minutes" required="required" />
+    	<input type="text" name="gas_type" placeholder="Gas type" required="required" />
+        <input type="text" name="water_content" placeholder="Water Content" required="required" />
+        <input type="text" name="time" placeholder="Time elapsed in minutes" required="required" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict IFT</button>
     </form>
 
    <br>
    <br>
    {{ prediction_text }}
+     {{ prediction_text2 }}
 
  </div>
 

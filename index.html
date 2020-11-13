@@ -4916,10 +4916,10 @@ span.bp3-icon:empty{
   content:"⌄"; }
 
 .bp3-icon-caret-left::before{
-  content:"〈"; }
+  content:"〈"; }
 
 .bp3-icon-caret-right::before{
-  content:"〉"; }
+  content:"〉"; }
 
 .bp3-icon-caret-up::before{
   content:"⌃"; }
@@ -14307,6 +14307,73 @@ a.anchor-link {
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Case-Study:-Modeling-IFT-and-Volume-Expansion-for-Gas-Injection-in-Heavy-Oil-Reservoirs">Case Study: Modeling IFT and Volume Expansion for Gas Injection in Heavy Oil Reservoirs<a class="anchor-link" href="#Case-Study:-Modeling-IFT-and-Volume-Expansion-for-Gas-Injection-in-Heavy-Oil-Reservoirs">&#182;</a></h1>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="OUTLINE">OUTLINE<a class="anchor-link" href="#OUTLINE">&#182;</a></h3><ol>
+<li><p>Problem Statement</p>
+</li>
+<li><p>Methodology</p>
+</li>
+<li><p>Results</p>
+</li>
+<li><p>Conclusions</p>
+</li>
+</ol>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Problem-Statement">Problem Statement<a class="anchor-link" href="#Problem-Statement">&#182;</a></h3><ul>
+<li><p>Lab experiments cost time and materials. Often we conduct many experiments to investigate how one or more variables, e.g. Type of Gas, Water Content, etc. effecting a target variable, IFT, Volume Ratio. However, the number of experiments needed to reveal this relationship is hard to capture.</p>
+</li>
+<li><p>If we find a way to model the properties that we want to measure using data from experiments, then we could reduce the number of experiments required.</p>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Methodology">Methodology<a class="anchor-link" href="#Methodology">&#182;</a></h3><ul>
+<li>Determine the set of variables that are expected to affect the target variable</li>
+<li>Generate the data from limited set of experiments.</li>
+<li>Split the data into training and test set.</li>
+<li>Train a model using the training set and use model to predict the results for unseen data.</li>
+<li>Measure the performance of the model in terms of accuracy or any other type of pre-determined metrics.</li>
+<li>Continue conducting more experiments and repeat the process until getting the desired accuracy.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Case-Study:-Prediction-of-IFT-and-Volume-Ratio">Case Study: Prediction of IFT and Volume Ratio<a class="anchor-link" href="#Case-Study:-Prediction-of-IFT-and-Volume-Ratio">&#182;</a></h3><ul>
+<li>Target variables: Prediction IFT and Volume ratio for Gas injection in Heavy Oil Reservoir</li>
+<li><p>Covariates :</p>
+<blockquote><ol>
+<li>Type of Gas [Co2, CH4]</li>
+<li>Water Content in the emulsion [0-1]</li>
+<li>Time elapsed since starting the experiments</li>
+<li>Emulsion Viscosity</li>
+</ol>
+</blockquote>
+</li>
+<li><p>Models : We will be testing three models:</p>
+<blockquote><p>1- Linear Regression Model : Assumes a linear relationship between the covariates and the target variable
+2- Gradient Boosting Model : Creates ensemble of decision trees trained sequentially, each is optimized to reduce the error of the previous one
+3- Artificial neural network ANN</p>
+</blockquote>
+</li>
+</ul>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15061,10 +15128,10 @@ Name: IFT, Length: 561, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[118]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lm</span> <span class="o">=</span> <span class="n">run_linear_model</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">viscosity</span> <span class="o">=</span> <span class="s1">&#39;not_included&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lm</span> <span class="o">=</span> <span class="n">run_linear_model</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">viscosity</span> <span class="o">=</span> <span class="s1">&#39;included&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15083,10 +15150,14 @@ Name: IFT, Length: 561, dtype: float64</pre>
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;Regressor__alpha&#39;: 0.4}
-model score: 0.515
-</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-608c4883927e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>lm <span class="ansi-blue-fg">=</span> run_linear_model<span class="ansi-blue-fg">(</span>X_train<span class="ansi-blue-fg">,</span>y_train<span class="ansi-blue-fg">,</span>viscosity <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;included&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;run_linear_model&#39; is not defined</pre>
 </div>
 </div>
 

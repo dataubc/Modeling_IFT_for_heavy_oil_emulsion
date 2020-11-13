@@ -36,7 +36,7 @@ After conducting initial data exploration and visualization I explopred differen
 
 Presentation:
 ---
-My presentation at University of Alberta can be found here (https://dataubc.github.io/Modeling_IFT_for_heavy_oil_emulsion/)[]
+My presentation at University of Alberta can be found [here](https://dataubc.github.io/Modeling_IFT_for_heavy_oil_emulsion/)
 
 
 Data is available upon request:

@@ -34,6 +34,9 @@ After conducting initial data exploration and visualization I explopred differen
 - [lm model in R for IFT and Volume expansion](https://github.com/dataubc/Modeling_IFT_for_heavy_oil_emulsion/blob/master/modeling_ift_r.md)
 
 
+Presentation:
+---
+My presentation at University of Alberta can be found here (https://dataubc.github.io/Modeling_IFT_for_heavy_oil_emulsion/)[]
 
 
 Data is available upon request:

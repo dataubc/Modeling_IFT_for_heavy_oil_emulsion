@@ -1,4 +1,4 @@
-# Modeling IFT and Volume Expansion for Heavy Oil Recovery by Gas Injection.
+# Modeling IFT and Volume Expansion for Heavy Oil Recovery by Gas Injection:
 
 ![alt text](https://github.com/dataubc/Modeling_IFT_for_heavy_oil_emulsion/blob/master/modeling_ift_r_files/figure-gfm/unnamed-chunk-1-1.png)
 

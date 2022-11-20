@@ -20,6 +20,7 @@
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="text" name="gas_type" placeholder="Gas type" required="required" />
         <input type="text" name="water_content" placeholder="Water Content" required="required" />
+        <input type="text" name="viscosity" placeholder="Oil Viscosity" required="required" />
         <input type="text" name="time" placeholder="Time elapsed in minutes" required="required" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict IFT</button>
     </form>

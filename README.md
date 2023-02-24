@@ -43,8 +43,3 @@ My presentation at University of Alberta can be found [here](https://dataubc.git
 Data is available upon request:
 Email : mmohamme@ualberta.ca
 
-```suggestion
-change
-
-sdfasdf
-```
